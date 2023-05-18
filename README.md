@@ -31,13 +31,13 @@ To enable the Telegram Log Monitor script on OpenWrt, you can follow these steps
 
 1. SSH into your OpenWrt router: Use an SSH client (e.g., PuTTY) to connect to your OpenWrt router using its IP address and login credentials.
 
-2. Copy the script: Once connected to the router via SSH, create a new file and paste the entire script into it. You can use the `vi` or `nano` text editors to create and edit the file. For example, you can run `nano telegram_auth_log` to create a new file named `telegram_auth_log.sh` and paste the script content into it.
+2. Copy the script: Once connected to the router via SSH, create a new file and paste the entire script into it. You can use the `vi` or `nano` text editors to create and edit the file. For example, you can run `nano telegram-auth-log` to create a new file named `telegram-auth-log` and paste the script content into it.
 
 3. Save the script: After pasting the script into the file, save it by pressing `Ctrl + O` (in `nano`) or `Esc` followed by `:wq` and Enter (in `vi`). Make sure the file is saved in a location accessible by the system, such as the `/etc/init.d/` directory.
 
 4. Set permissions: Set the executable permissions for the script by running the following command:
    ```
-   chmod +x /etc/init.d/telegram_auth_log
+   chmod +x /etc/init.d/telegram-auth-log
    ```
 
 5. Configure the script: Open the script file using the text editor and modify the following variables according to your setup:
@@ -48,7 +48,7 @@ To enable the Telegram Log Monitor script on OpenWrt, you can follow these steps
 
 6. Enable the script: Run the following command to enable the script:
    ```
-   /etc/init.d/telegram_auth_log enable
+   /etc/init.d/telegram-auth-log enable
    ```
 
 7. Start the script: Start the Telegram Log Monitor script by running the following command:
