@@ -79,18 +79,18 @@ start() {
 }
 
 stop() {
-  send_telegram_message "Telegram Log Monitor stopped."
+  send_telegram_message "Slate stopped."
   # Stop the script by killing the tail process
   killall tail
 }
 
 reload() {
- send_telegram_message "Telegram Log Monitor reloading..."
+ send_telegram_message "Slate reloading..."
  restart
 }
 
 restart() {
-  send_telegram_message "Telegram Log Monitor restarted."
+  send_telegram_message "Slate restarted."
 
   stop
   sleep 1

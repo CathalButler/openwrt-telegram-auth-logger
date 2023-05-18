@@ -1,6 +1,8 @@
-# A Script that forwards logs to a Telegram bot
+# A script that forwards logs to a Telegram bot
 
 The following script is an init script for a Telegram Log Monitor. Its purpose is to monitor a log file and send log messages to a specified Telegram group chat using a Telegram bot API.
+
+> Slate is the hostname of the travel router I use :)
 
 ## Script Breakdown
 
