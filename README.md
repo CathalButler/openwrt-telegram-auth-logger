@@ -3,7 +3,6 @@
 The following script is an init script for a Telegram Log Monitor. Its purpose is to monitor a log file and send log messages to a specified Telegram group chat using a Telegram bot API.
 
 > Slate is the hostname of the travel router I use :)
-
 ## Script Breakdown
 
 - The script is written in the Shell scripting language and begins with the shebang (`#!/bin/sh /etc/rc.common`), which specifies the interpreter to be used.
@@ -44,7 +43,7 @@ To enable the Telegram Log Monitor script on OpenWrt, you can follow these steps
     - `TELEGRAM_API_TOKEN`: Replace it with your actual Telegram bot API token.
     - `TELEGRAM_GROUP_ID`: Replace it with the ID of your Telegram group chat.
     - `LOG_FILE`: If the log file to monitor is different from `/var/log/messages`, update this variable accordingly.
-    - `LOG_PATTERN_NOTICE`, `LOG_PATTERN_INFO`, `LOG_PATTERN_HOSTAPD_CONNECTED`, `LOG_PATTERN_HOSTAPD_DISCONNECTED`: Modify these regular expression patterns if you need to match different log messages.
+    - `LOG_PATTERN_NOTICE`, `LOG_PATTERN_INFO`, `LOG_PATTERN_HOSTAPD_CONNECTED`, `LOG_PATTERN_HOSTAPD_DISCONNECTED`: Modify these regular expression patterns if you need to match different log messages. In my case I am using `authpriv` and `hostapd` which match to logs ssh and wireless connections.
 
 6. Enable the script: Run the following command to enable the script:
    ```
@@ -53,7 +52,7 @@ To enable the Telegram Log Monitor script on OpenWrt, you can follow these steps
 
 7. Start the script: Start the Telegram Log Monitor script by running the following command:
    ```
-   /etc/init.d/telegram_auth_log start
+   /etc/init.d/telegram-auth-log start
    ```
 
 The script should now be active and monitoring the specified log file. It will send log messages and notifications to the configured Telegram group chat. You can check the functionality and troubleshoot any potential issues by examining the log messages in the OpenWrt system logs or by monitoring the Telegram group chat.
